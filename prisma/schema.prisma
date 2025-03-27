@@ -12,11 +12,10 @@ model User {
   clerkId  String  @unique
   email    String  @unique
   fullName String  @unique
-  password String?
   avatar   String?
 
   books    Book[]
-  helpfuls BookHelpful[]
+  comments BookComment[]
 }
 
 model Book {
@@ -26,20 +25,20 @@ model Book {
   fileUrl    String
   isRentable Boolean @default(false)
 
+  userId   String
+  user     User          @relation(fields: [userId], references: [id])
+  comments BookComment[]
+}
+
+model BookComment {
+  id      String @id @default(uuid())
+  comment String
+
   userId String
   user   User   @relation(fields: [userId], references: [id])
 
-  helpfuls BookHelpful[]
-}
-
-model BookHelpful {
-  id String @id @default(uuid())
-
-  userId String
   bookId String
+  book   Book   @relation(fields: [bookId], references: [id])
 
-  user User @relation(fields: [userId], references: [id])
-  book Book @relation(fields: [bookId], references: [id])
-
-  @@unique([userId, bookId])
+  createdAt DateTime @default(now())
 }
