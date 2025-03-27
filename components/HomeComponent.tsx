@@ -4,7 +4,7 @@ import { Search, ArrowRight } from 'lucide-react';
 function HomeComponent() {
 
   return (
-    <div className='flex flex-col items-center justify-center h-full mt-28 p-10 gap-6'>
+    <div className='flex flex-col items-center justify-center h-1/2 mt-28 p-10 gap-6'>
       <h1 className='text-7xl font-medium font-serif'>Discover, Read, and Share</h1>
       <h1 className='text-7xl font-medium font-serif text-blue-500'>Beautiful Stories</h1>
       <h1 className='w-1/2 text-center text-gray-600 text-xl font-light'>
