@@ -1,9 +1,2 @@
 @import "tailwindcss";
-
-::-webkit-scrollbar{
-    display: none;
-}
-
-::selection{
-    color: #4f46e5;
-}
+@import "@react-pdf-viewer/core/lib/styles/index.css";

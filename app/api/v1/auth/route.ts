@@ -7,15 +7,15 @@ export async function POST(req: NextRequest) {
 
     console.log("Webhook payload:", payload);
 
-    if(payload.type === "user.created") {
-        await prisma.user.create({
-            data: {
-                email: payload.data.email_addresses[0].email_address,
-                fullName: payload.data.first_name + " " + payload.data.last_name ? payload.data.last_name : "",
-                clerkId: payload.data.id,
-                avatar: payload.data.profile_image_url,
-            }
-        })
+    if (payload.type === "user.created") {
+      await prisma.user.create({
+        data: {
+          email: payload.data.email_addresses[0].email_address,
+          fullName: payload.data.first_name,
+          clerkId: payload.data.id,
+          avatar: payload.data.profile_image_url,
+        },
+      });
     }
 
     return NextResponse.json({
