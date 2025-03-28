@@ -144,7 +144,7 @@ const Explore: React.FC = () => {
       <div className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-8">
-            <aside className="w-full md:w-64 shrink-0">
+            <div className="w-full md:w-64 shrink-0">
               <div className="sticky top-24 bg-card p-6 rounded-xl border border-border">
                 <h3 className="text-lg font-medium mb-4 flex items-center">
                   <Filter className="h-5 w-5 mr-2" /> Filters
@@ -179,7 +179,7 @@ const Explore: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </aside>
+            </div>
             <div className="flex-1">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-xl font-medium">

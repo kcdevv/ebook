@@ -4,7 +4,7 @@ import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@cl
 
 function Navbar() {
   return (
-    <div className='flex justify-between items-center bg-gray-100 px-6 py-4 sticky top-0 z-0'>
+    <div className='flex justify-between items-center bg-slate-100 px-6 py-4 sticky top-0 z-10'>
       {/* Logo Section */}
       <div className='flex items-center gap-2'>
         <img src='/logo.svg' alt='logo' className='h-8' />
@@ -13,11 +13,11 @@ function Navbar() {
 
       {/* Navigation Links */}
       <div className='flex items-center gap-6'>
-        <Link href='/' className='hover:text-gray-600'>Home</Link>
-        <Link href='/explore' className='hover:text-gray-600'>Explore</Link>
-        <Link href='/categories' className='hover:text-gray-600'>Categories</Link>
-        <Link href='/about' className='hover:text-gray-600'>About us</Link>
-        <Link href='/contact' className='hover:text-gray-600'>Contact us</Link>
+        <Link href='/' className='hover:text-blue-500'>Home</Link>
+        <Link href='/explore' className='hover:text-blue-500'>Explore</Link>
+        <Link href='/categories' className='hover:text-blue-500'>Categories</Link>
+        <Link href='#' className='hover:text-blue-500'>About us</Link>
+        <Link href='/contact' className='hover:text-blue-500'>Contact us</Link>
       </div>
 
       {/* Authentication & Actions Section */}

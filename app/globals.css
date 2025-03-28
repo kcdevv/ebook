@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @import "@react-pdf-viewer/core/lib/styles/index.css";
+
+::-webkit-scrollbar{
+    display: none;
+}
